@@ -1,12 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cuenta {
     private String usuario;
     private String clave;
     private double saldo;
+    private List<String> historial;
 
     public Cuenta(String usuario, String clave) {
         this.usuario = usuario;
         this.clave = clave;
         this.saldo = 0.0;
+        this.historial = new ArrayList<>();
+        historial.add("Cuenta creada");
     }
 
     public String getUsuario() {
@@ -18,28 +24,30 @@ public class Cuenta {
     }
 
     public double getSaldo() {
+        historial.add("Consulta de saldo: S/ " + saldo);
         return saldo;
     }
 
     public void depositar(double monto) {
-        if (monto > 0) {
-            saldo += monto;
-            System.out.println("Depósito exitoso. Saldo actual: S/ " + saldo);
-        } else {
-            System.out.println("[X] Monto inválido.");
-        }
+        saldo += monto;
+        historial.add("Depósito: S/ " + monto);
     }
 
     public void retirar(double monto) {
-        if (monto > 0 && monto <= saldo) {
+        if (monto <= saldo) {
             saldo -= monto;
-            System.out.println("Retiro exitoso. Saldo actual: S/ " + saldo);
+            historial.add("Retiro: S/ " + monto);
         } else {
-            System.out.println("[X] Saldo insuficiente o monto inválido.");
+            historial.add("Intento de retiro fallido: S/ " + monto + " (Saldo insuficiente)");
         }
     }
 
     public void cambiarClave(String nuevaClave) {
         this.clave = nuevaClave;
+        historial.add("Clave modificada");
+    }
+
+    public List<String> getHistorial() {
+        return historial;
     }
 }
