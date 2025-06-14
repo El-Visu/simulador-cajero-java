@@ -11,15 +11,15 @@ public class CajeroAutomatico {
             System.out.println("2. Iniciar sesión");
             System.out.println("3. Salir");
             System.out.print("Seleccione una opción: ");
-            
+
             if (!scanner.hasNextInt()) {
-                System.out.println("[X] Entrada inválida.");
-                scanner.next();
+                System.out.println("[X] Entrada inválida. Solo números.");
+                scanner.nextLine();
                 continue;
             }
 
             int opcion = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // limpiar buffer
 
             switch (opcion) {
                 case 1:
@@ -30,11 +30,13 @@ public class CajeroAutomatico {
                     cuenta = new Cuenta(nuevoUsuario, nuevaClave);
                     System.out.println("Cuenta creada con éxito.");
                     break;
+
                 case 2:
                     if (cuenta == null) {
-                        System.out.println("[X] No hay cuentas registradas.");
+                        System.out.println("[X] No hay cuentas registradas. Crea una primero.");
                         break;
                     }
+
                     System.out.print("Usuario: ");
                     String usuario = scanner.nextLine();
                     System.out.print("Clave: ");
@@ -53,7 +55,7 @@ public class CajeroAutomatico {
 
                             if (!scanner.hasNextInt()) {
                                 System.out.println("[X] Entrada inválida.");
-                                scanner.next();
+                                scanner.nextLine();
                                 continue;
                             }
 
@@ -67,20 +69,19 @@ public class CajeroAutomatico {
                                 case 2:
                                     System.out.print("Ingrese monto a depositar: ");
                                     double montoDep = scanner.nextDouble();
-                                    scanner.nextLine();
                                     cuenta.depositar(montoDep);
                                     break;
                                 case 3:
                                     System.out.print("Ingrese monto a retirar: ");
                                     double montoRet = scanner.nextDouble();
-                                    scanner.nextLine();
                                     cuenta.retirar(montoRet);
                                     break;
                                 case 4:
                                     System.out.print("Ingrese nueva clave: ");
+                                    scanner.nextLine(); // consumir salto de línea
                                     String nueva = scanner.nextLine();
                                     cuenta.cambiarClave(nueva);
-                                    System.out.println("Clave actualizada.");
+                                    System.out.println("Clave actualizada correctamente.");
                                     break;
                                 case 5:
                                     sesionActiva = false;
@@ -94,9 +95,11 @@ public class CajeroAutomatico {
                         System.out.println("[X] Usuario o clave incorrectos.");
                     }
                     break;
+
                 case 3:
                     System.out.println("Gracias por usar el simulador. Hasta luego.");
                     return;
+
                 default:
                     System.out.println("[X] Opción inválida.");
             }

@@ -22,21 +22,12 @@ public class Cuenta {
     }
 
     public void depositar(double monto) {
-        if (monto > 0) {
-            saldo += monto;
-            System.out.println("Depósito exitoso.");
-        } else {
-            System.out.println("[X] Monto inválido.");
-        }
+        if (monto > 0) saldo += monto;
     }
 
     public void retirar(double monto) {
-        if (monto > 0 && monto <= saldo) {
-            saldo -= monto;
-            System.out.println("Retiro exitoso.");
-        } else {
-            System.out.println("[X] Monto inválido o insuficiente.");
-        }
+        if (monto > 0 && monto <= saldo) saldo -= monto;
+        else System.out.println("Fondos insuficientes.");
     }
 
     public void cambiarClave(String nuevaClave) {
