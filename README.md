@@ -61,5 +61,5 @@ java CajeroAutomatico
 ## 🧑‍💻 Autor
 
 **Adrián Alexander Visurraga Arica**  
-Estudiante de Desarrollo de Software  
+Estudiante de Ingeniería de Software con IA 
 [GitHub: @El-Visu](https://github.com/El-Visu)
