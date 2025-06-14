@@ -11,15 +11,14 @@ public class CajeroAutomatico {
             System.out.println("2. Iniciar sesión");
             System.out.println("3. Salir");
             System.out.print("Seleccione una opción: ");
-
-            if (!scanner.hasNextInt()) {
-                System.out.println("[X] Entrada inválida. Solo números.");
-                scanner.nextLine();
+            
+            int opcion;
+            try {
+                opcion = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("[X] Entrada inválida. Intente de nuevo.");
                 continue;
             }
-
-            int opcion = scanner.nextInt();
-            scanner.nextLine(); // limpiar buffer
 
             switch (opcion) {
                 case 1:
@@ -53,14 +52,13 @@ public class CajeroAutomatico {
                             System.out.println("5. Cerrar sesión");
                             System.out.print("Seleccione una opción: ");
 
-                            if (!scanner.hasNextInt()) {
-                                System.out.println("[X] Entrada inválida.");
-                                scanner.nextLine();
+                            int accion;
+                            try {
+                                accion = Integer.parseInt(scanner.nextLine());
+                            } catch (NumberFormatException e) {
+                                System.out.println("[X] Entrada inválida. Intente de nuevo.");
                                 continue;
                             }
-
-                            int accion = scanner.nextInt();
-                            scanner.nextLine();
 
                             switch (accion) {
                                 case 1:
@@ -68,17 +66,16 @@ public class CajeroAutomatico {
                                     break;
                                 case 2:
                                     System.out.print("Ingrese monto a depositar: ");
-                                    double montoDep = scanner.nextDouble();
+                                    double montoDep = Double.parseDouble(scanner.nextLine());
                                     cuenta.depositar(montoDep);
                                     break;
                                 case 3:
                                     System.out.print("Ingrese monto a retirar: ");
-                                    double montoRet = scanner.nextDouble();
+                                    double montoRet = Double.parseDouble(scanner.nextLine());
                                     cuenta.retirar(montoRet);
                                     break;
                                 case 4:
                                     System.out.print("Ingrese nueva clave: ");
-                                    scanner.nextLine(); // consumir salto de línea
                                     String nueva = scanner.nextLine();
                                     cuenta.cambiarClave(nueva);
                                     System.out.println("Clave actualizada correctamente.");
