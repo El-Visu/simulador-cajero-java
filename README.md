@@ -75,4 +75,5 @@ SimuladorCajeroJava/
 
 - 👤 **Adrián Alexander Visurraga Arica**
 - 📧 Contacto: adrianalex1780@gmail.com
-- 🌐 GitHub: [Tu perfil](https://github.com/TU_USUARIO)
+- 🌐 GitHub: [Tu perfil](https://github.com/El-Visu)
+
