@@ -1,49 +1,90 @@
-🏦 Simulador de Cajero Automático en Java
-Este proyecto es una simulación de un cajero automático desarrollado con Java Swing. Permite crear cuentas, iniciar sesión, consultar saldo, hacer depósitos, retiros y ver el historial de transacciones con fecha y hora.
 
-✅ Requisitos
-Java JDK instalado (versión 8 o superior)
+# 💳 Simulador de Cajero Automático en Java
 
-Git Bash o terminal con soporte para comandos Unix
+Una aplicación de escritorio simple en **Java con Swing**, que simula el funcionamiento básico de un cajero automático.
 
-Archivos CajeroGUI.java y Cuenta.java en la misma carpeta
+---
 
-🚀 Instrucciones para compilar y ejecutar
-Abre Git Bash (o tu terminal).
+## 🧩 Características
 
-Ve a la carpeta del proyecto:
+✔️ Crear cuenta  
+✔️ Iniciar sesión  
+✔️ Consultar saldo  
+✔️ Depositar dinero  
+✔️ Retirar dinero  
+✔️ Cambiar clave  
+✔️ Ver historial con fecha y hora  
+✔️ Cerrar sesión con mensaje  
 
-bash
-Copiar
-Editar
-cd /c/Users/TU_USUARIO/Desktop/NombreDeTuCarpeta
-💡 Reemplaza TU_USUARIO y NombreDeTuCarpeta según tu caso.
+---
 
-Compila el proyecto:
+## 🛠️ Requisitos
 
-bash
-Copiar
-Editar
-javac CajeroGUI.java Cuenta.java
-Ejecuta el simulador:
+- ☕ Java JDK 8 o superior
+- 🖥️ Git Bash, CMD o Terminal compatible
 
-bash
-Copiar
-Editar
+---
+
+## 📂 Estructura del proyecto
+
+```
+SimuladorCajeroJava/
+├── Cuenta.java           ← Clase de lógica de cuenta bancaria
+├── CajeroGUI.java        ← Interfaz gráfica del simulador
+└── README.md             ← Este archivo de instrucciones
+```
+
+---
+
+## 🚀 Cómo compilar y ejecutar
+
+1. Abre **Git Bash** o **CMD**  
+2. Navega a la carpeta del proyecto:
+
+```bash
+cd "C:\Users\user\Desktop\SimuladorCajeroJava"
+```
+
+3. Compila los archivos `.java`:
+
+```bash
+javac Cuenta.java CajeroGUI.java
+```
+
+4. Ejecuta la aplicación:
+
+```bash
 java CajeroGUI
-📌 Funcionalidades
-Crear cuenta con usuario y clave
+```
 
-Iniciar sesión
+---
 
-Consultar saldo
+## 🖼️ (Opcional) Agregar imagen del programa
 
-Depositar dinero
+Si quieres mostrar cómo se ve tu programa, sube una captura en una carpeta y agrégala así:
 
-Retirar dinero
+```markdown
+![Vista del cajero](imagenes/cajero.png)
+```
 
-Cambiar clave
+---
 
-Ver historial de transacciones (con fecha y hora)
+## 🧑‍💻 Autor
 
-Cerrar sesión con confirmación
+**Adrian Alexander Visurraga Arica**  
+🔗 GitHub: [https://github.com/tu-usuario](https://github.com/tu-usuario) *(reemplaza con tu enlace real)*
+
+---
+
+## 🔄 Mejoras a futuro
+
+- Conexión con base de datos (MySQL)
+- Validaciones más avanzadas
+- Múltiples cuentas con persistencia
+- Versión web con Spring Boot (¡en desarrollo!)
+
+---
+
+## 📅 Última actualización
+
+`Junio 2025`
