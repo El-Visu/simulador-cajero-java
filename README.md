@@ -65,9 +65,10 @@ Si quieres mostrar cómo se ve tu programa, sube una captura en una carpeta y ag
 
 ```markdown
 ![Vista del cajero](imagenes/cajero.png)
-## Captura del Simulador
 
-![Simulador](imagenes/Screenshot_1.png)
+## Captura del Simulador
+![Captura del Simulador](imagenes/Screenshot_1.png)
+
 
 ```
 
