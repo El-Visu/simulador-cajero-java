@@ -1,65 +1,49 @@
-# 💳 Simulador de Cajero Automático en Java
+🏦 Simulador de Cajero Automático en Java
+Este proyecto es una simulación de un cajero automático desarrollado con Java Swing. Permite crear cuentas, iniciar sesión, consultar saldo, hacer depósitos, retiros y ver el historial de transacciones con fecha y hora.
 
-Este proyecto es un simulador de cajero automático simple desarrollado en Java con fines académicos y de práctica. Permite a un usuario crear una cuenta, iniciar sesión y realizar operaciones básicas como consultar saldo, depositar, retirar dinero y cambiar su clave.
+✅ Requisitos
+Java JDK instalado (versión 8 o superior)
 
----
+Git Bash o terminal con soporte para comandos Unix
 
-## 🛠️ Tecnologías Utilizadas
+Archivos CajeroGUI.java y Cuenta.java en la misma carpeta
 
-- Java (JDK 8 o superior)
-- Consola (interfaz de texto)
-- Git y GitHub para control de versiones
+🚀 Instrucciones para compilar y ejecutar
+Abre Git Bash (o tu terminal).
 
----
+Ve a la carpeta del proyecto:
 
-## 🚀 Funcionalidades
+bash
+Copiar
+Editar
+cd /c/Users/TU_USUARIO/Desktop/NombreDeTuCarpeta
+💡 Reemplaza TU_USUARIO y NombreDeTuCarpeta según tu caso.
 
-- Crear cuenta con usuario y clave  
-- Iniciar sesión  
-- Consultar saldo  
-- Depositar dinero  
-- Retirar dinero  
-- Cambiar clave  
-- Cerrar sesión  
+Compila el proyecto:
 
----
+bash
+Copiar
+Editar
+javac CajeroGUI.java Cuenta.java
+Ejecuta el simulador:
 
-## 📦 Estructura del Proyecto
+bash
+Copiar
+Editar
+java CajeroGUI
+📌 Funcionalidades
+Crear cuenta con usuario y clave
 
-```
-simulador-cajero-java/
-├── Cuenta.java
-├── CajeroAutomatico.java
-├── README.md
-```
+Iniciar sesión
 
----
+Consultar saldo
 
-## ▶️ Cómo ejecutar el proyecto
+Depositar dinero
 
-### 1. Clona el repositorio
+Retirar dinero
 
-```bash
-git clone https://github.com/El-Visu/simulador-cajero-java.git
-cd simulador-cajero-java
-```
+Cambiar clave
 
-### 2. Compila los archivos
+Ver historial de transacciones (con fecha y hora)
 
-```bash
-javac Cuenta.java CajeroAutomatico.java
-```
-
-### 3. Ejecuta el programa
-
-```bash
-java CajeroAutomatico
-```
-
----
-
-## 🧑‍💻 Autor
-
-**Adrián Alexander Visurraga Arica**  
-Estudiante de Ingeniería de Software con IA 
-[GitHub: @El-Visu](https://github.com/El-Visu)
+Cerrar sesión con confirmación
