@@ -70,6 +70,7 @@ Si quieres mostrar cómo se ve tu programa, sube una captura en una carpeta y ag
 ![Captura del Simulador](imagenes/Screenshot_1.png)
 
 
+
 ```
 
 ---
